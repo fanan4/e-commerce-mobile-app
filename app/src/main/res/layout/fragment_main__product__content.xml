@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Main_Product_Content"
+    android:background="#ededed"
+    >
+
+   <com.google.android.material.bottomnavigation.BottomNavigationView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/bottomNavigation"
+       app:menu="@menu/bottom_navigation_layout"
+       android:layout_alignParentBottom="true"
+       />
+   <ScrollView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+      <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+
+         <androidx.recyclerview.widget.RecyclerView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/recyclNewItem"
+             />
+         <androidx.recyclerview.widget.RecyclerView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/recyclPopularItem"
+             android:layout_below="@+id/recyclNewItem"
+             android:layout_marginTop="20dp"
+             />
+         <androidx.recyclerview.widget.RecyclerView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/userPoint"
+             android:layout_below="@+id/recyclPopularItem"
+             android:layout_marginTop="20dp"
+             android:layout_marginBottom="10dp"
+             />
+      </RelativeLayout>
+
+
+   </ScrollView>
+
+</RelativeLayout>
